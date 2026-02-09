@@ -1,0 +1,4 @@
+
+
+clear
+echo "Bash works"

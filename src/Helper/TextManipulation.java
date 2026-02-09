@@ -1,13 +1,16 @@
 package src.Helper;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 public class TextManipulation {
 
     public void delete() {
-        for (int i = 0; i < 100; i++) {
-            System.out.print("\r\b\b\b\b\b\b\b\b\b\b\b");
-        }
+        System.out.println("\033[H\033[2J");
+		System.out.flush();
     }
 
     public void print(String phrase, long time) {
@@ -23,7 +26,7 @@ public class TextManipulation {
 
     public void print(String phrase) {
         try {
-            int time = 100;
+            int time = 25;
             for (int i = 0; i < phrase.length(); i++) {
                 System.out.print(phrase.charAt(i));
                 Thread.sleep(time);
@@ -47,7 +50,7 @@ public class TextManipulation {
 
     public void println(String phrase) {
         try {
-            int time = 100;
+            int time = 25;
             for (int i = 0; i < phrase.length(); i++) {
                 System.out.print(phrase.charAt(i));
                 Thread.sleep(time);
