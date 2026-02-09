@@ -1,19 +1,22 @@
 package src.Helper;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 public class TextManipulation {
 
     public void delete() {
-        try {
-            if (System.getProperty("os.name").startsWith("Windows")) {
-                Runtime.getRuntime().exec("cls");
-            } else {
-                Runtime.getRuntime().exec("clear");
-            }
-        } catch (IOException e) {
-            System.out.println("clearing didnt work");
-        }
+        // TODO Auto-generated method stub
+
+		String[] cmd = new String[]{"/bin/bash", "clear.sh"};
+		try {
+			Process pr = Runtime.getRuntime().exec(cmd);
+		} catch (IOException e) {
+			System.out.println("Couldnt clear");
+		}
     }
 
     public void print(String phrase, long time) {
@@ -29,7 +32,7 @@ public class TextManipulation {
 
     public void print(String phrase) {
         try {
-            int time = 100;
+            int time = 25;
             for (int i = 0; i < phrase.length(); i++) {
                 System.out.print(phrase.charAt(i));
                 Thread.sleep(time);
@@ -53,7 +56,7 @@ public class TextManipulation {
 
     public void println(String phrase) {
         try {
-            int time = 100;
+            int time = 25;
             for (int i = 0; i < phrase.length(); i++) {
                 System.out.print(phrase.charAt(i));
                 Thread.sleep(time);

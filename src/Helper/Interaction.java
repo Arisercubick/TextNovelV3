@@ -18,7 +18,7 @@ public class Interaction {
 		boolean answerBol = false;
 		System.out.println();
 		while (noChoice) {
-			text.print(question, 100);
+			text.print(question);
 
             String answer = reader.next();
             if (answer.toLowerCase().equals("y")) {
@@ -28,7 +28,7 @@ public class Interaction {
                 noChoice = false;
 				answerBol = false;
             } else {
-                text.println("Please put in the right response", 100);
+                text.println("Please put in the right response");
             }
         }
 		
