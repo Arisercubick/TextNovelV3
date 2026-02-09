@@ -6,6 +6,7 @@ import src.entities.*;
 public class Interaction {
 	// The tutorial
 	public void tutorial(Player player) {
+		TextManipulation text = new TextManipulation();
 		player.haveDoneTheTutorial = true;
 	}
 		
@@ -22,11 +23,9 @@ public class Interaction {
             String answer = reader.next();
             if (answer.toLowerCase().equals("y")) {
                 noChoice = false;
-                reader.close();
                 answerBol = true;
             } else if (answer.toLowerCase().equals("n")) {
                 noChoice = false;
-				reader.close();
 				answerBol = false;
             } else {
                 text.println("Please put in the right response", 100);
