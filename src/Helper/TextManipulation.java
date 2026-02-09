@@ -5,14 +5,8 @@ import java.io.IOException;
 public class TextManipulation {
 
     public void delete() {
-        try {
-            if (System.getProperty("os.name").startsWith("Windows")) {
-                Runtime.getRuntime().exec("cls");
-            } else {
-                Runtime.getRuntime().exec("clear");
-            }
-        } catch (IOException e) {
-            System.out.println("clearing didnt work");
+        for (int i = 0; i < 100; i++) {
+            System.out.print("\r\b\b\b\b\b\b\b\b\b\b\b");
         }
     }
 
