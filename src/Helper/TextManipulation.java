@@ -6,8 +6,11 @@ public class TextManipulation {
 
     public void delete() {
         try {
-            Runtime.getRuntime().exec("cls");
-            Runtime.getRuntime().exec("clear");
+            if (System.getProperty("os.name").startsWith("Windows")) {
+                Runtime.getRuntime().exec("cls");
+            } else {
+                Runtime.getRuntime().exec("clear");
+            }
         } catch (IOException e) {
             System.out.println("clearing didnt work");
         }
