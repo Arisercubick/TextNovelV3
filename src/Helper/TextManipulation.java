@@ -1,4 +1,4 @@
-package TheWorldToTheUnknown.Helper;
+package src.Helper;
 
 public class TextManipulation {
     public void print(String phrase, long time) {

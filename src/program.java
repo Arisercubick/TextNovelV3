@@ -1,7 +1,8 @@
-package TheWorldToTheUnknown;
-import TheWorldToTheUnknown.Helper.*;
+package src;
+import src.Helper.*;
+import src.entities.*;
 import java.util.Scanner;
-import TheWorldToTheUnknown.entities.*;
+
 public class program {
     public static TextManipulation text = new TextManipulation();
 	public static Interaction interact = new Interaction();
@@ -15,11 +16,9 @@ public class program {
             String answer = reader.next();
             if (answer.toLowerCase().equals("y")) {
                 quit = true;
-                reader.close();
                 pGame();
             } else if (answer.toLowerCase().equals("n")) {
                 quit = true;
-				reader.close();
             } else {
                 text.println("Please put in the right response", 100);
             }
@@ -27,15 +26,16 @@ public class program {
     }
 
     public static void pGame() {
-		Player player = new Player();
-		Scanner reader = new Scanner(System.in);
-		
-		text.print("Choose youre username: ");
-		String username = reader.nextLine();
-		System.out.println();
-		player.playerDefault(username);
-		
-		if (interact.yOrN("Do you want to do the tutorial? (y/n): ") && !player.haveDoneTheTutorial) {
-			
+        Player player = new Player();
+        Scanner reader = new Scanner(System.in);
+
+        text.print("Choose your username: ", 100);
+        String username = reader.nextLine();
+        System.out.println();
+        player.playerDefault(username);
+        
+        if (interact.yOrN("Do you want to do the tutorial? (y/n): ") && !player.haveDoneTheTutorial) {
+            interact.tutorial(player);
+        }
     }
 }

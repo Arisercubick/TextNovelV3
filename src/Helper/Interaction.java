@@ -1,17 +1,18 @@
+package src.Helper;
 import java.util.Scanner;
-import java.util.Random;
-import TheWorldToTheUnknown.Helper.*;
-import entities.*;
+import src.entities.*;
+
 
 public class Interaction {
-	
 	// The tutorial
 	public void tutorial(Player player) {
+		player.haveDoneTheTutorial = true;
+	}
 		
 	
 	public boolean yOrN(String question) {
 		Scanner reader = new Scanner(System.in);
-		TextManipulation text = new TextManispulation();
+		TextManipulation text = new TextManipulation();
 		boolean noChoice = true;
 		boolean answerBol = false;
 		System.out.println();
@@ -20,11 +21,11 @@ public class Interaction {
 
             String answer = reader.next();
             if (answer.toLowerCase().equals("y")) {
-                noChoice = true;
+                noChoice = false;
                 reader.close();
                 answerBol = true;
             } else if (answer.toLowerCase().equals("n")) {
-                noChoice = true;
+                noChoice = false;
 				reader.close();
 				answerBol = false;
             } else {
@@ -32,6 +33,6 @@ public class Interaction {
             }
         }
 		
-		return answerBol
+		return answerBol;
 	}
 }

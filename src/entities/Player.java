@@ -1,3 +1,5 @@
+package src.entities;
+
 public class Player {
 	public int health;
 	public int base_defence;
