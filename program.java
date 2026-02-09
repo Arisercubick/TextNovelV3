@@ -1,6 +1,6 @@
-package src;
 import src.Helper.*;
-import src.entities.*;
+import src.Helper.TextManipulation;
+import src.entities.Player;
 import java.util.Scanner;
 
 public class program {
