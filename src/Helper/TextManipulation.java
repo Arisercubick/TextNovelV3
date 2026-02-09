@@ -9,14 +9,8 @@ import java.io.PrintWriter;
 public class TextManipulation {
 
     public void delete() {
-        // TODO Auto-generated method stub
-
-		String[] cmd = new String[]{"/bin/bash", "clear.sh"};
-		try {
-			Process pr = Runtime.getRuntime().exec(cmd);
-		} catch (IOException e) {
-			System.out.println("Couldnt clear");
-		}
+        System.out.println("\033[H\033[2J");
+		System.out.flush();
     }
 
     public void print(String phrase, long time) {
