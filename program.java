@@ -2,7 +2,7 @@ import src.Helper.*;
 import src.Helper.TextManipulation;
 import src.entities.Player;
 import java.util.Scanner;
-
+// The program
 public class program {
     public static TextManipulation text = new TextManipulation();
 	public static Interaction interact = new Interaction();
