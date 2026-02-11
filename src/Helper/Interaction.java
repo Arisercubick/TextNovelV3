@@ -7,7 +7,10 @@ public class Interaction {
 	// The tutorial
 	public void tutorial(Player player) {
 		TextManipulation text = new TextManipulation();
-		player.haveDoneTheTutorial = true;
+		player.setHaveDoneTutorial(true);
+		text.delete();
+
+
 	}
 		
 	

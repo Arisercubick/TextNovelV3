@@ -1,11 +1,5 @@
 package src.Helper;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-
 public class TextManipulation {
 
     public void delete() {
@@ -26,10 +20,10 @@ public class TextManipulation {
 
     public void print(String phrase) {
         try {
-            int time = 25;
+            final int TIME_SPEED = 25;
             for (int i = 0; i < phrase.length(); i++) {
                 System.out.print(phrase.charAt(i));
-                Thread.sleep(time);
+                Thread.sleep(TIME_SPEED);
             }
         } catch (InterruptedException e) {
             System.out.println("\nSkipped");
@@ -50,10 +44,10 @@ public class TextManipulation {
 
     public void println(String phrase) {
         try {
-            int time = 25;
+            final int TIME_SPEED = 25;
             for (int i = 0; i < phrase.length(); i++) {
                 System.out.print(phrase.charAt(i));
-                Thread.sleep(time);
+                Thread.sleep(TIME_SPEED);
             }
             System.out.println();
         } catch (InterruptedException e) {

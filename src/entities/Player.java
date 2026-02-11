@@ -1,19 +1,25 @@
 package src.entities;
 
-public class Player {
-	private int health;
-	private int base_defence;
-	private int base_attack;
-	private String name;
+public class Player extends Entities {
 	
 	public void playerDefault(String chosenName) {
-		this.health = 100;
-		this.base_attack = 5;
-		this.base_defence = 3;
-		this.name = chosenName;
+		this.setLvl(1);
+		this.setisAlive(true);
+		this.setHP(100);
+		this.setBase_attack(10);
+		this.setBase_defence(5);
+		this.setName(chosenName);
 	}
 	
 	// Boolean flags of the game
 	
-	public boolean haveDoneTheTutorial;
+	private boolean haveDoneTutorial;
+
+	public void setHaveDoneTutorial(boolean set) {
+		this.haveDoneTutorial = set;
+	}
+
+	public boolean getHaveDoneTutorial() {
+		return this.haveDoneTutorial;
+	}
 }
