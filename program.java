@@ -29,7 +29,7 @@ public class program {
     public static void pGame() {
         Player player = new Player();
         Scanner reader = new Scanner(System.in);
-
+        
         text.print("Choose your username: ");
         String username = reader.nextLine();
         System.out.println();

@@ -1,10 +1,10 @@
 package src.entities;
 
 public class Player {
-	public int health;
-	public int base_defence;
-	public int base_attack;
-	public String name;
+	private int health;
+	private int base_defence;
+	private int base_attack;
+	private String name;
 	
 	public void playerDefault(String chosenName) {
 		this.health = 100;
