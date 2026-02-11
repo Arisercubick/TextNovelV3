@@ -37,4 +37,12 @@ public class Interaction {
 		
 		return answerBol;
 	}
+
+	public void printMons(String[] art) {
+		System.out.println();
+		for (int i = 0; i < art.length; i++) {
+			System.out.println(art[i]);
+		}
+		System.out.println();
+	}
 }

@@ -1,7 +1,6 @@
-import src.Helper.*;
-import src.Helper.TextManipulation;
-import src.entities.Player;
 import java.util.Scanner;
+import src.Helper.*;
+import src.entities.Player;
 // The program
 public class program {
     public static TextManipulation text = new TextManipulation();
@@ -10,6 +9,7 @@ public class program {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         boolean quit = false;
+        text.delete();
         text.println("Welcome to The World To The Uknown. A game made by Aris John Apolinario");
         while (!quit) {
             text.print("Do you wish to continue? (y/n): ");

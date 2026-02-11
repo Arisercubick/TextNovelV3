@@ -52,7 +52,9 @@ public class Entities {
         final int MINIMUM = 0;
         if (def > MINIMUM) {
             this.base_defence = def;
-        } else {
+        } else if (this.base_defence > 0) {
+                // Does nothing
+        }else {
             this.base_defence = 0;
         }
     }
@@ -67,6 +69,8 @@ public class Entities {
         final int MINIMUM = 0;
         if (atk > MINIMUM) {
             this.base_attack = atk;
+        } else if (this.base_attack > 0) {
+            // Does nothing
         } else {
             this.base_attack = 0;
         }
@@ -76,5 +80,21 @@ public class Entities {
         return this.base_defence;
     }
 
+    private int critChance;
+
+    public int getCritChance() {
+        return this.critChance;
+    }
+
+    public void setCritChance(int crit) {
+        final int MINIMUM = 0;
+        if (crit > MINIMUM) {
+            this.critChance = crit;
+        } else if (this.critChance > 0) {
+            // Does nothing
+        } else {
+            this.critChance = 0;
+        }
+    }
 
 }
