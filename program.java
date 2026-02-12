@@ -38,5 +38,6 @@ public class program {
         if (interact.yOrN("Do you want to do the tutorial? (y/n): ") && !player.getHaveDoneTutorial()) {
             interact.tutorial(player);
         }
+        player.playerDefault(username);
     }
 }

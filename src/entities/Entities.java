@@ -1,6 +1,7 @@
 package src.entities;
 
 public class Entities {
+    private int maxHP;
     private int health;
     private boolean isAlive;
     private String name;
@@ -33,10 +34,16 @@ public class Entities {
         this.isAlive = life;
     }
 
+    public boolean getisAlive() {
+        return this.isAlive;
+    }
+
     public void setHP(int hp) {
         final int MINIMUM = 0;
-        if (hp > MINIMUM) {
+        if (hp > MINIMUM && hp <= this.maxHP) {
             this.health = hp;
+        } if (this.health > MINIMUM) {
+            // Does nothing
         } else {
             this.health = 0;
             this.isAlive = false;
@@ -46,6 +53,18 @@ public class Entities {
     public int getHealth() {
         return this.health;
     }
+
+    public void setMAXHP(int hp) {
+        final int MINIMUM = 0;
+
+        if (hp > MINIMUM) {
+            this.maxHP = hp;
+        } else {
+            this.health = 0;
+            this.isAlive = false;
+        }
+    }
+
     private int base_defence;
 
     public void setBase_defence(int def) {
@@ -88,9 +107,11 @@ public class Entities {
 
     public void setCritChance(int crit) {
         final int MINIMUM = 0;
-        if (crit > MINIMUM) {
+        final int MAXIMUM = 100;
+
+        if (crit > MINIMUM && crit <= MAXIMUM) {
             this.critChance = crit;
-        } else if (this.critChance > 0) {
+        } else if (this.critChance > MINIMUM && crit <= MAXIMUM) {
             // Does nothing
         } else {
             this.critChance = 0;

@@ -9,7 +9,7 @@ public class Interaction {
 		TextManipulation text = new TextManipulation();
 		player.setHaveDoneTutorial(true);
 		text.delete();
-
+		text.println("Welcome to the tutorial.\nHere we will show you the basic controls to get you started");
 
 	}
 		
