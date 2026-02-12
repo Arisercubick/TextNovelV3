@@ -33,11 +33,11 @@ public class program {
         text.print("Choose your username: ");
         String username = reader.nextLine();
         System.out.println();
-        player.playerDefault(username);
+        player.Player(username);
 
         if (interact.yOrN("Do you want to do the tutorial? (y/n): ") && !player.getHaveDoneTutorial()) {
             interact.tutorial(player);
         }
-        player.playerDefault(username);
+        player.Player(username);
     }
 }
